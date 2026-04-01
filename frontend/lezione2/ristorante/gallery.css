@@ -1,0 +1,20 @@
+/* imgs */
+img {
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery (Migliorata rispetto alla tabella) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container_img img {
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

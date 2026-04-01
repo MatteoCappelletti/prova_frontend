@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <style>
+        table tr td {
+            width: 20%;
+        }
+
+        .container_img {
+            width: 100%;
+            height: 350px;
+        }
+
+        .container_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-self: center;
+        }
+
+        #lista_imgs {
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./menu.html">menu</a></li>
+            <li><a href="./nostrastoria.html">la nostra storia</a></li>
+            <li><a href="./eventi.html">eventi</a></li>
+            <li><a href="./gallery.html">gallery</a></li>
+            <li><a href="./prenotatavolo.html">prenota un tavolo</a></li>
+            <li><a href="./contatti.html">contatti</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Gallery</h1>
+        </section>
+        <!-- lista immagini -->
+        <section id="lista_imgs">
+            <table>
+                <tr>
+                    <td>
+                        <section class="container_img">
+                            <img src="https://trattorialapinetadadario.it/wp-content/uploads/2022/12/Piatti-da-trattoria.jpeg">
+                        </section>
+                    </td>
+                    <td>
+                        <section class="container_img">
+                            <img src="https://www.alfuoricampo.it/wp-content/uploads/2023/05/piatto1.jpg">
+                        </section>
+                    </td>
+                    <td>
+                        <section class="container_img">
+                            <img src="https://img.italiaonline.it/0WO0N000002VTRvWAO_piatto%20doro%20002.jpg">
+                        </section>
+                    </td>
+                    <td>
+                        <section class="container_img">
+                            <img src="https://trattorialapinetadadario.it/wp-content/uploads/2023/02/Differenza-tra-risorante-e-trattoria-1000x675.jpeg">
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Matteo's Restaurant
+        </p>
+        <p>
+            Via Pallidest 89, Milano (MI), Italia
+            <br>
+            (+39) 178-644-9465
+            <br>
+            contatti@matteosrestaurant.it
+        </p>
+    </footer>
+</body>
+
+</html>

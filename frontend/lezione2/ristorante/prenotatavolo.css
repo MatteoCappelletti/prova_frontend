@@ -1,0 +1,49 @@
+/* Form di Prenotazione */
+form {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+input[type="date"], 
+input[type="time"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #eee;
+    color: #666;
+}

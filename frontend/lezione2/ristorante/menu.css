@@ -1,0 +1,131 @@
+/* --- STILE GENERALE DEL MAIN --- */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #5d2e17; /* Marrone scuro caldo */
+    border-bottom: 2px solid #e0d5c1;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- SEZIONI (Antipasti, Primi, ecc.) --- */
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #8b4513;
+    background-color: #fcf8f3;
+    padding: 10px 20px;
+    border-left: 5px solid #8b4513;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* --- IL SINGOLO PIATTO (L'elemento magico) --- */
+
+.menu-item {
+    display: grid;
+    /* Definizione colonne: Immagine fixed, Testo flessibile, Prezzo auto */
+    grid-template-columns: 120px 1fr auto;
+    /* Definizione righe: Titolo e Descrizione separate */
+    grid-template-rows: auto auto;
+    column-gap: 25px;
+    row-gap: 5px;
+    align-items: start;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #d3d3d3;
+}
+
+/* Gestione Immagine */
+.menu-item img {
+    grid-row: 1 / span 2; /* L'immagine occupa entrambe le righe */
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Ritaglia l'immagine senza deformarla */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Titolo del piatto */
+.menu-item h3 {
+    grid-column: 2;
+    margin: 0;
+    font-size: 1.3rem;
+    color: #5d2e17;
+}
+
+/* Prezzo */
+.menu-item h4 {
+    grid-column: 3;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #27ae60; /* Verde scuro per un tocco di freschezza */
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Descrizione del piatto */
+.menu-item p {
+    grid-column: 2 / span 2; /* La descrizione si allarga sotto al prezzo */
+    margin: 5px 0 0 0;
+    font-style: italic;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* --- RESPONSIVE (Per cellulari) --- */
+
+@media (max-width: 600px) {
+    .menu-item {
+        grid-template-columns: 1fr auto; /* Togliamo la colonna per l'immagine */
+        grid-template-rows: auto auto auto;
+    }
+
+    .menu-item img {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .menu-item h3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .menu-item h4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .menu-item p {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+}
